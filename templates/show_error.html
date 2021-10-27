@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Error Page - Video Attendance System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans|Nova+Mono');
+            :root {
+            --font-header: 'Nova Mono', monospace;
+            --font-text: 'Open Sans', sans-serif;
+            --color-theme: #413341;
+            --color-bg: #131111;
+
+            --animation-sentence: 'You know you\'re supposed to leave, right?';
+            --animation-duration: 60s;
+            }
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            }
+            body {
+            width: 100%;
+            font-family: var(--font-text);
+            color: var(--color-theme);
+            background: var(--color-bg);
+            overflow: hidden;
+            }
+            .container {
+            text-align: center;
+            /*margin: 1rem 0 0;*/
+            }
+            .container h1 {
+            font-family: var(--font-header);
+            font-size: calc(4rem + 2vw);
+                text-transform: uppercase;
+            }
+            .container p {
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-size: 2rem;
+            margin: 1.5rem 0 3rem;
+            }
+            svg.keyhole {
+            height: 82px;
+            width: 82px;
+            opacity: 0;
+            visibility: hidden;
+            animation: showKey 0.5s 0.5s paused ease-out forwards;
+            }
+            svg.key {
+            height: 164px;
+            width: 164px;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            animation: showKey 0.5s 0.5s paused ease-out forwards;
+            }
+            .ghost {
+            position: absolute;
+            bottom: 5px;
+            left: calc(50% - 100px);
+            width: 200px;
+            height: 200px;
+            animation: hoverGhost calc(var(--animation-duration)/2) ease-in-out 2;
+
+            }
+            .ghost:before {
+            content: var(--animation-sentence);
+            color: var(--color-theme);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100%;
+            text-align: center;
+            line-height: 2;
+            padding: 1rem;
+            visibility: hidden;
+            opacity: 0;
+            animation:
+                showText calc(var(--animation-duration)/8) calc(var(--animation-duration)*3/16) ease-out forwards,
+                showNewText calc(var(--animation-duration)/8) calc(var(--animation-duration)*27/40) ease-out forwards,
+                showFinalText calc(var(--animation-duration)/8) var(--animation-duration) ease-out forwards;
+
+            }
+
+            @keyframes hoverGhost {
+            25% {
+                transform: translateX(20vw);
+            }
+            75% {
+                transform: translateX(-20vw);
+            }
+            }
+
+            @keyframes showKey {
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+            }
+
+
+            @keyframes showText {
+            2% {
+                opacity: 1;
+                visibility: visible;
+            }
+            98% {
+
+                opacity: 1;
+                visibility: visible;
+            }
+            99% {
+                --animation-sentence: 'You know you\'re supposed to leave, right?';
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                --animation-sentence: 'So much to do, so little time...';
+            }
+            }
+            @keyframes showNewText {
+            2% {
+                --animation-sentence: 'So much to do, so little time...';
+                opacity: 1;
+                visibility: visible;
+            }
+            98% {
+
+                opacity: 1;
+                visibility: visible;
+            }
+            99% {
+                --animation-sentence: 'So much to do, so little time...';
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                --animation-sentence: 'Click on the Logo to go to Home...';
+            }
+            }
+            @keyframes showFinalText {
+            2% {
+                opacity: 1;
+                visibility: visible;
+            }
+            98% {
+                opacity: 1;
+                visibility: visible;
+            }
+            100% {
+                opacity: 0;
+                visibility: visible;
+            }
+            }
+            .container h3 {
+                margin-top: 3%;
+            }
+        </style>
+    </head>
+    
+
+    <body>
+        <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="{% url 'home'%}" class="navbar-brand nav-link"><h3> Video Attendance System </h3></a>
+        </div>
+    </nav>
+    <br><br><br>
+        <svg style="display: none;">
+            <symbol id="ghost" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 26.458333 26.458334"><g transform="translate(0 -270.542)"><path d="M4.63 279.293c0-4.833 3.85-8.751 8.6-8.751 4.748 0 8.598 3.918 8.598 8.75H13.23zM4.725 279.293h16.914c.052 0 .19.043.19.096l-.095 14.329c0 .026-.011.05-.028.068a.093.093 0 0 1-.067.028c-.881 0-1.235-1.68-2.114-1.616-.995.072-1.12 2.082-2.114 2.154-.88.064-1.233-1.615-2.115-1.615-.881 0-1.233 1.615-2.114 1.615-.881 0-1.233-1.615-2.114-1.615-.882 0-1.236 1.679-2.115 1.615-.994-.072-1.12-2.082-2.114-2.154-.88-.063-1.41 1.077-2.114 1.616-.021.016-.05-.01-.067-.028a.097.097 0 0 1-.028-.068v-14.33c0-.052.042-.095.095-.095z" fill="#f1eedb" paint-order="stroke fill markers"/><path d="M15.453 281.27a1.987 1.94 0 0 1-.994 1.68 1.987 1.94 0 0 1-1.987 0 1.987 1.94 0 0 1-.994-1.68h1.988z" fill="#282b24" paint-order="stroke fill markers"/><g fill="#282b24" transform="matrix(1 0 0 1.0177 .283 -5.653)"><ellipse cx="10.205" cy="278.668" rx="1.231" ry="1.181" paint-order="stroke fill markers"/><ellipse ry="1.181" rx="1.231" cy="278.668" cx="16.159" paint-order="stroke fill markers"/><ellipse ry=".331" rx=".853" cy="280.936" cx="10.205" opacity=".5" paint-order="stroke fill markers"/><ellipse cx="16.159" cy="280.936" rx=".853" ry=".331" opacity=".5" paint-order="stroke fill markers"/></g><ellipse ry=".614" rx="8.082" cy="296.386" cx="13.229" opacity=".1" fill="#f1eedb" paint-order="stroke fill markers"/></g></symbol>
+        
+        </svg>
+        
+        <div class="container">
+            <h1>{{error_number}}</h1>
+            <p>{{error_name}}</p>
+        </div>
+        
+        <div class="ghost">
+            <svg class="ghost">
+            <use href="#ghost"/>
+            </svg>
+        </div>
+
+        <script>
+            const ghost = document.querySelector(".ghost");
+            const heading = document.querySelector("h1");
+            const paragraph = document.querySelector("p");
+            const root = document.querySelector(":root");
+            const rootStyles = getComputedStyle(root);
+            const animationDuration = parseInt(rootStyles.getPropertyValue("--animation-duration"))*1000;
+            const timeoutID = setTimeout(() => {
+            key.parentElement.parentElement.style.cursor = "grab";
+            clearTimeout(timeoutID);
+            }, keyTimer);
+        </script>
+
+    </body>
+</html>

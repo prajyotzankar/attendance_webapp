@@ -1,0 +1,155 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link re="stylesheet" href="style.css">
+    <title>Home - Video Attendance System</title>
+</head>
+
+<style>
+
+    body {
+    background-color: #131111;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    .nav-link{
+        color: aqua;
+    }
+
+    .Video{
+        padding: 100px;
+        padding-top: 50px;
+        padding-right: 150px;
+        
+        ;
+    }
+
+    .container {
+        font-size: 130%;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #212429;
+        color: white;
+        padding: 5px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 15px;
+        font-size: 20px;
+        border: none;
+        }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: left;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        color: white;
+        background-color: #272222;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .container h3 {
+        margin-top: 3%;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5%;
+        max-width: 100%;
+        max-height: 650px;
+        height: auto;
+        width: auto;
+         
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #272222;}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #292424;}
+
+</style>
+
+<body>
+
+    <!-- Navigation-->
+ 
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        
+        <div class="container">
+            <a href="{% url 'home'%}" class="navbar-brand nav-link"><h3> Video Attendance System </h3></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class=" navbar-toggler-icon">
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropbtn">Attendance</button>
+                        <div class="dropdown-content">
+                          <a href="{% url 'attendance'%}">Regular Attendance</a>
+                          <a href="{% url 'defaulter'%}">Defaulter Attendance</a>
+                          <a href="{% url 'upload'%}">Mark Attendance</a>
+                          
+                        </div>
+                      </div>
+                    </li>  
+
+                    <li class="nav-item">
+                        <a href="{% url 'profile'%}" class="nav-link" style="color: white; 
+                        padding-left: 15px;
+                        padding-right: 15px;"> Profile </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Body-->
+    
+    <div class="row m-0">
+        <div class="col">
+            <img src="{% static 'home_bg.jpg'%}" >
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
+ 

@@ -1,0 +1,116 @@
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+    <title>Login Page - Video Attendance System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+
+  <style>
+      body {
+          color: #fff;
+          background-color: #131111;
+          font: 300 1em 'Fira Sans', sans-serif;
+      }
+
+      .form_css {
+          
+          background-color: #1C181A;
+          padding: 4em 4em 2em;
+          max-width: 500px;
+          margin: 50px auto 0;
+          box-shadow: 0 0 1em rgb(0, 0, 0);
+          border-radius: 2px;
+          color: white;
+          /*margin-top : 150px;*/
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          
+      }
+
+      .raise:hover,
+      .raise:focus {
+        /*box-shadow: 0 0.5em 0.5em -0.4em var(--hover);*/
+        box-shadow: 5px 5px 15px 1px rgb(0, 0, 0);
+        transform: translateY(-0.25em);
+      }
+
+      $colors: ( 
+        raise: #131111, 
+      );
+
+      @each $button, $color in $colors {
+        .#{$button} {
+          --color: #{$color};
+          --hover: #{adjust-hue($color, 45deg)};
+        }
+      }
+
+      button {  
+        color: var(--color);
+        transition: 0.25s;
+        
+        &:hover,
+        &:focus { 
+          border-color: var(--hover);
+          color: #131111;
+        }
+      }
+
+
+      button {
+          width: 200px;
+          background-color: #2D272D;
+          /*border: 1px solid;*/
+          font: inherit;
+          line-height: 1;
+          margin: 0.5em;
+          padding: 1em 2em;
+          
+      }
+
+      .container h3 {
+        margin-top: 3%;
+      }
+
+  </style>
+
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      
+        <div class="container">
+            <a href="{% url 'home'%}" class="navbar-brand nav-link"><h3> Video Attendance System </h3></a>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <div class="form_css">
+        <div class = "content-section">
+            <form  method="POST" class="form-content" >
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4"><h2>Log In</h2></legend>
+                    {{form | crispy}}
+                </fieldset>
+                <!--
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6Lf2pbwcAAAAAK-q7hDsDUaFjSTtAL-sPb99zAgA"></div>
+                <div class="form-group">
+                -->
+                    <button type="submit" class='raise' style="font-size: medium;">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

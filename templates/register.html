@@ -1,0 +1,62 @@
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    <style>
+        body{
+            background: #131111;
+            color: white;
+        }
+
+        form {
+            background: #1C181A;
+            padding: 4em 4em 2em;
+            max-width: 575px;
+            margin: 50px auto 0;
+            box-shadow: 5px 5px 1em black;
+            border-radius: 2px;
+            color:white;
+        }
+        
+        #id_username, #id_email, #id_password1, #id_password2{
+            background-color: #131111;
+            color: white;
+        }
+
+        .btn btn-outline-info {
+            border-radius: 2px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 2em;
+            line-height: 1.6em;
+            margin: 2em 0 0;
+            outline: none;
+            padding: .8em 0;
+            text-shadow: 0 1px #68B25B;
+        }
+    </style>
+    
+</head>
+
+<div class = "content-section">
+    <form  method="POST" class="form-content " >
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Register</legend>
+            {{form | crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-info" >Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
