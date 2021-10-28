@@ -28,4 +28,10 @@ This is the initial design and we have tried to complete it as close to the desi
 
 **(\*This does not depict final UI and are subject to change)**
 
-![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.009.png)![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.009.png)![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.009.png)![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.010.png)![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.011.png)![](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.012.png)
+![](synopsis_draft_v_3/login_ss.png)![](synopsis_draft_v_3/registration_ss.png)
+![](synopsis_draft_v_3/search_attendance_ss.png)![](synopsis_draft_v_3/defaulter_list_ss.png)
+![](synopsis_draft_v_3/error_page_ss.png)
+
+
+**Project Developers**
+![](synopsis_draft_v_3/registration_ss.png)
