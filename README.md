@@ -1,5 +1,8 @@
 # Facial Recognition Attendance System 
 
+![](synopsis_draft_v_3/mit_logo.png)
+
+
 **Problem Statement**
 
 Attendance marking in a classroom during a lecture is not only burdensome but also a time-consuming task. Old-school attendance systems are no longer efficient enough for keeping track of student attendance. Sign sheet, roll call, RFID-based systems, punch-card systems, swipe card systems, and biometric systems such as fingerprint analysis, iris analysis, and so on are all available for recording attendance in schools or universities. All of these systems have some or all of the following disadvantages: cause disruption to event conduct, high upfront costs, the possibility of proxy and incorrect input, a kiosk can only handle one user at a time, which can cause huge delays when a large number of users want to mark their attendance, especially in colleges and schools. Some more advanced systems have been proposed or are in the experimental stage in recent years that overcome some of the previously described concerns, although they have their downsides. One such system requires students to travel along a certain corridor, which may cause delays when a large number of students seek to indicate their attendance. Most existing solutions are invalid or impracticable for institutions that require attendance to be conducted on a per-time-slot basis. All of these issues are addressed by the proposed solution.
@@ -30,7 +33,7 @@ This is the initial design and we have tried to complete it as close to the desi
 
 ![](synopsis_draft_v_3/login_ss.png)![](synopsis_draft_v_3/registration_ss.png)
 ![](synopsis_draft_v_3/search_attendance_ss.png)![](synopsis_draft_v_3/defaulter_list_ss.png)
-![](synopsis_draft_v_3/error_page_ss.png)
+![](synopsis_draft_v_3/error_page_ss.png)![](synopsis_draft_v_3/developers_ss.png)
 
 
 **Project Developers**
