@@ -1,6 +1,4 @@
-# attendance_webapp
-
-
+# Facial Recognition Attendance System 
 
 **Problem Statement**
 
