@@ -19,7 +19,7 @@ The proposed system processes the video feed of CCTV cameras installed in the cl
 The live video feed from the CCTV cameras installed in the classrooms/lecture halls is sent to an intranet server, where it is first pre-processed, and each detected face is cut out of the frame captured, passed on as individual images, and transformed into a valid input format for the facial recognition model. The model runs facial recognition on each face image and outputs a list of names of people recognised. This list is subsequently passed as an argument in MySQL query, which updates attendance in the institute's relational database. Different views of this Relational database are leveraged to provide different information to different types of end-users on the website. The web platform features three classes of users: admin, faculty, and student. Each has varied access and is shown information based on their class. Admins have complete control and can access and edit all records.
 
 
-![synopsis_draft_v_3](Aspose.Words.9ac99b99-725b-4f01-b49b-f72bfef4f176.002.png)
+![synopsis_draft_v_3](synopsis_draft_v_3/ml_system_working.png)
 
 ## **Outlook**
 Design:
