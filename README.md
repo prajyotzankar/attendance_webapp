@@ -38,6 +38,6 @@ This is the initial design and we have tried to complete it as close to the desi
 
 **Project Developers**
 
-Prajyot Zankar<a href="https://www.linkedin.com/in/prajyotzankar/" target="_blank">LinkedIn</a>
+Prajyot Zankar <a href="https://www.linkedin.com/in/prajyotzankar/" target="_blank">LinkedIn</a>
 
-Malhar Yadav<a href="https://www.linkedin.com/in/malhar-yadav-ba53b61a3/" target="_blank">LinkedIn</a>
+Malhar Yadav <a href="https://www.linkedin.com/in/malhar-yadav-ba53b61a3/" target="_blank">LinkedIn</a>
