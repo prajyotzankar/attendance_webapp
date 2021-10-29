@@ -37,4 +37,4 @@ This is the initial design and we have tried to complete it as close to the desi
 
 
 **Project Developers**
-![](synopsis_draft_v_3/registration_ss.png)
+<a href="https://www.linkedin.com/in/prajyotzankar/" target="_blank">Prajyot Zankar</a>
