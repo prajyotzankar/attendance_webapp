@@ -29,11 +29,10 @@ Design:
 
 This is the initial design and we have tried to complete it as close to the design and is not final. We keep updating the designs as per our needs.
 
-**(\*This does not depict final UI and are subject to change)**
 
 ![](synopsis_draft_v_3/login_ss.png)![](synopsis_draft_v_3/registration_ss.png)
-![](synopsis_draft_v_3/search_attendance_ss.png)![](synopsis_draft_v_3/defaulter_list_ss.png)
-![](synopsis_draft_v_3/error_page_ss.png)![](synopsis_draft_v_3/developers_ss.png)
+![](synopsis_draft_v_3/search_attendance_ss.png)![](synopsis_draft_v_3/defaulter_list_ss.jpg)
+![](synopsis_draft_v_3/error_page_ss.png)![](synopsis_draft_v_3/developers_ss.jpg)
 
 
 **Project Developers**
